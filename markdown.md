@@ -47,8 +47,8 @@ _This will also be italics_
 
 `**This will be bold**`  
 **This will be bold**  
-`__This will also be bold`  
-__This will also be bold  
+`__This will also be bold__`  
+__This will also be bold__  
 
 ### Lists
 
@@ -89,7 +89,7 @@ Automatic Links: http://github.com
 Markdown Links: [GitHub](http://github.com)
 ```
 
-http://github.com
+http://github.com  
 [GitHub](http://github.com)
 
 ### Images
