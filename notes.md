@@ -1,4 +1,32 @@
 # CTI-110-MSB2 Notes
+## Table of Contents
+- Chapter 1
+	- [What is a computer?](#what-is-a-computer)
+	- [What is a computer program?](#what-is-a-computer-program)
+	- [What do programmers do?](#what-do-programmers-do)
+	- [Software Development Lifecycle](#software-development-lifecycle)
+	- [Writing and Communication](#writing-and-communication)
+	- [Programming Languages](#programming-languages)
+	- [Compilers and Interpreters](#compilers-and-interpreters)
+	- [Client/Server Applications](#clientserver-applications)
+	- [Markup languages](#markup-languages)
+- [Chapter 2](#chapter-2)
+	- [Client/Server Design in Web Applications](#clientserver-design-in-web-applications)
+	- [Working with Files and Folders](#working-with-files-and-folders)
+	- [Locating Files and folders on Windows](#locating-files-and-folders-on-windows)
+	- [Locating Files and Folders on the Internet](#locating-files-and-folders-on-the-internet)
+	- [Internet Naming Conventions for Files and Folders](#internet-naming-conventions-for-files-and-folders)
+	- [Working with a Local Web Server](#working-with-a-local-web-server)
+	- [What Languages Will I Use?](#what-languages-will-i-use)
+	- [What Software Will I Need?](#what-software-will-i-need)
+	- [Using Your Web Server](#using-your-web-server)
+	- [Using URLs with your Web Server](#using-urls-with-your-web-server)
+	- [Always Use URLs to Run Your Web Applications](#always-use-urls-to-run-your-web-applications)
+	- [Where to Save Your Work Files](#where-to-save-your-work-files)
+	- [The Importance of Frequent Backups](#the-importance-of-frequent-backups)
+	- [Creating an HTML Document](#creating-an-html-document)
+	- [Creating a PHP Program](#creating-a-php-program)
+	- [Creating an Interactive HTML and PHP Program](#creating-an-interactive-html-and-php-program)
 ## Chapter 1
 ### What is a computer?
 - A computer is a *programmable machine*
@@ -115,5 +143,109 @@ Effective communication is a highly valuable skill for programmers:
   (PHP: Hypertext Preprocessor) applications.
 	- HTML is a declarative markup language that uses <tags> to define the 
 	  structure of documents and data.
-### Testing Cahnges for Git and Github
+## Chapter 2
+### Client/Server Design in Web Applications
+- Client Programs(Web Browser)
+	- Send requests to server programs to perform a tasks
+	- Web browsers send requests to Web Servers
+		- examples include: visiting a link or submitting a form
+- Server Programs(Web Server)
+	- Receive requests, process them, and respond appropriately
+	- Server applications may also make requests of other applications during
+	  processing
+	- May respond to hudreds or thousands of requests
+	- Web server response is *typically* a web page
+- Web-based applications:
+	- Require no special software for users
+	- Can be updated without requiring access to the end users computer
+### Working with Files and Folders
+- Computer files contain data of some kind: an image, video, document, executable code, etc.
+	- File extensions are used to indicate the type of data contained in the 
+	  file:  
+	  | _File Type | Extension | Editor     | Viewer      |
+	  |:----------:|:---------:|:----------:|:-----------:|
+	  | _Jpeg Image| .jpg      | Paint      | Photos      |
+	  | _Mp3 audio | .mp3      | Audacity   | Groove      |
+	  | _Zip file  | .zip      | 7zip       | 7zip        |
+	- File types we will use:  
+	  | _File Type | Extension | Editor     | Viewer      |
+	  |:----------:|:---------:|:----------:|:-----------:|
+	  | _Text file | .txt      | Text Editor| Text Editor |
+	  | _HTML file | .htm      | Text Editor| Browser     |
+	  | _CSS file  | .css      | Text Editor| Browser     |
+	  | _PHP file  | .php      | Text Editor| Web Server  |
+- Files are typically organized into folders(aka directories) for easy file 
+  management
+	- Files and folders are stored on protable or fixed disks and accessed via 
+	  disk drives
+	- Local disks are attached directly while remote disks are attached to the 
+	  network
+- In order to locate files, we need an addressing scheme
+### Locating Files and folders on Windows
+- Windows uses the disk drive as the root of the file addressing
+	- this is followed by a list of folders
+	- And finally followed by teh name of the file itself
+	- for example:  
+	D:\CourseMaterial\Coursework\wage1.html
+### Locating Files and Folders on the Internet
+- Internet addresses are based on the IP(Internet Protocol) addressing scheme
+	- An IP address is a unique series of numbers that point to a folder on a web 
+	  server, example 128.30.52.100
+	- Since it would be difficult to use this address every time we wanted to access a web site, we use domain names instead(www.w3.org)
+- So, a domain name refers to an IP address
+	- A URL(Uniform Resource Locator) consists of:
+		- A domain name(www.php.net)
+		- A list of folders(if any) to get to the file
+		- lastly, the file name and extension of the resource we want to request
+		- For example:
+		http://www.php.net/license/index.php
+		- Where www.php.net is the domain name
+		- license is the folder
+		- and index.php is the name of the file we are after
+		- Note: typically, if no file name is requested, the web server will 
+		  return a default document (like index.php for php servers)
+- Internet addresses use a forward slashes(/) while Windows will use either a forward or back slash(\)
+### Internet Naming Conventions for Files and Folders
+- When naming files for use on the internet:
+	- Use descriptive names
+		- tax-report-2016.html not tr16.html
+	- Avoid very long file names
+	- Use hyphens, not spaces or underscores, between words
+	- Use lower-case instead of upper-case letters
+		- Some server environments are case sensitive
+### Working with a Local Web Server
+- Since we are installing and running our Web server locally, we don't have to 
+  be connected to the internet to work on our code exercises
+- We will use a special loopback address and domain name to reference our local
+  server
+	- The domain name is localhost and is on IP address 127.0.0.1
+	- Our URLs will look like:
+	http://localhost/webtech/samples/my-web1.php
+### What Languages Will I Use?
+- We will create the structure for our user interfaces using:  
+  HTML(Hypertext Markup Language)
+- We will apply formatting and style to the interfaces using:  
+  CSS(Cascading Stylesheets)
+- For receiving and processing input as well as returning results, we will use:  
+  PHP(PHP Hypertext Processor) programming language
+- Finally, To store and retreive data, we will use:  
+  MySQL(Structured Query Language)
+### What Software Will I Need?
+- A text editor to edit code
+- A Web server to enable PHP processing
+- A Web browser to view created applications
+### Using Your Web Server
+- This course is designed to make use of a local, standalone web server
+	- The exercises can be completed without an internet connection
+	- The server is portable and can be executed from a removable drive
+	- This type of environment is often used by professional web developers when
+	  designing and testing web applications
+### Using URLs with your Web Server
+### Always Use URLs to Run Your Web Applications
+### Where to Save Your Work Files
+### The Importance of Frequent Backups
+### Creating an HTML Document
+### Creating a PHP Program
+### Creating an Interactive HTML and PHP Program
+
 
